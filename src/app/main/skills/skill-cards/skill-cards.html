@@ -1,0 +1,19 @@
+<div class="row">
+  @for (card of Cards; track card.title) {
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">{{ card.title }}</div>
+      <div class="card-body">
+        @for(item of card.SkillItems; track item.title; let idx = $index){
+        @if(idx > 0){
+        <hr />
+        }
+        <app-card-item [name]='item.title'
+                       [progress]='item.progress'
+                       [description]='item.description'></app-card-item>
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>

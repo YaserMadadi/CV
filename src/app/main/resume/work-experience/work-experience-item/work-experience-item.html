@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header"
+       [id]="item_id">
+    <!-- <h5 class="mb-0"> -->
+    <button class="btn btn-link"
+            data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#' + collaps_ID"
+            [attr.aria-expanded]="false"
+            [attr.aria-controls]="'#' + collaps_ID">
+      <h5 class="mb-0">{{ Title }}</h5>
+    </button>
+    <!-- </h5> -->
+  </div>
+  <div [id]="collaps_ID"
+       class="collapse"
+       [attr.aria-labelledby]="item_id"
+       [attr.data-bs-parent]="'#' + parentID">
+    <div class="card-body">
+      <ng-content>
+
+      </ng-content>
+    </div>
+  </div>
+</div>

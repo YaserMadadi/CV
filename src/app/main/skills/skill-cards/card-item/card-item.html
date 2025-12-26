@@ -1,0 +1,17 @@
+<div class="progress">
+  @if(progress > 0){
+
+  <span class="skill"><span>{{ name }}</span> <i class="val">{{ progress }}%</i></span>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar bg-info progress-bar-striped"
+         role="progressbar"
+         [style.width.%]="progress"
+         aria-valuenow="{{ progress }}"
+         aria-valuemin="0"
+         aria-valuemax="100">
+      {{ progress }}%
+    </div>
+  </div>
+  <span class='progress-description'>{{ description }}</span>
+  }
+</div>
