@@ -2,7 +2,9 @@
 # Skills Section
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  min-height: 60px;
+  max-height: 80px;
+  height: auto;
   display: block;
   background: none;
   border-radius: 0;
